@@ -36,8 +36,10 @@ START "Authentication Service" java -jar spring-boot-cloud-authentication-servic
 
 Eureka server is running 8761 port, Now let's open it. Where we can check that:
 
-* 3 instance of account-server is running.
-* 1 instance of zuul-service is running.
+* 1 instance of API Gateway service is running.
+* 1 instance of User service is running.
+* 1 instance of Order service is running.
+* 1 instance of Authentication service is running.
 
 
 ### Eureka server : [http://localhost:8761/](http://localhost:8761/)

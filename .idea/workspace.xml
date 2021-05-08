@@ -20,13 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2c55492b-14a4-47db-bca7-e4293d1c7383" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../spring-boot-microservices-crud-mysql-angular5-example/spring-boot-cloud-eureka-account-service/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-boot-microservices-crud-mysql-angular5-example/spring-boot-cloud-eureka-account-service/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spring-boot-microservices-crud-mysql-angular5-example/spring-boot-cloud-zuul-routing/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-boot-microservices-crud-mysql-angular5-example/spring-boot-cloud-zuul-routing/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-boot-cloud-client-api/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-cloud-client-api/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-boot-cloud-eureka-account-service/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-cloud-eureka-account-service/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-boot-cloud-eureka-server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-cloud-eureka-server/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-boot-cloud-zuul-routing/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-cloud-zuul-routing/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-boot-cloud-zuul-routing/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-cloud-zuul-routing/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka-server.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/eureka-server.PNG" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,7 +29,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -51,7 +46,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/spring-boot-cloud-eureka-server" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">

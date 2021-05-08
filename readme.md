@@ -1,7 +1,7 @@
 # Spring boot microservice example [![Build Status](https://travis-ci.com/subhashlamba/spring-microservices.svg?branch=master)](https://travis-ci.com/subhashlamba/spring-microservices)
 
 
-This is example of spring boot microservice example with Eureka Server + Eureka Client + Zuul routing
+This is example of spring boot microservice example with Eureka Server + Eureka Client + Spring Cloud API Getway + OAuth2.0 + 
 
 ## Checkout repository
 
@@ -30,7 +30,7 @@ START "API Gateway" java -jar spring-boot-cloud-zuul-routing/target/zuul-api-gat
 START "User Service" java -jar spring-boot-cloud-eureka-user-service/target/user-service.jar --server.port=8181
 START "Order Service" java -jar spring-boot-cloud-eureka-order-service/target/order-service.jar --server.port=8282
 START "Authentication Service" java -jar spring-boot-cloud-authentication-service/target/authentication-service.jar --server.port=8383
-
+```
 
 ## Step 2: Check Eureka Server
 
@@ -44,8 +44,9 @@ Eureka server is running 8761 port, Now let's open it. Where we can check that:
 
 ![eureka server](eureka-server.PNG)
 
+## Step 3: Generate OAuth2.0 token
 
-```
+```sh
 curl -X POST \
   http://localhost:8080/oauth/token \
   -H 'authorization: Basic amF2YWRldmVsb3BlcnpvbmU6c2VjcmV0' \
@@ -57,9 +58,9 @@ curl -X POST \
   -F password=mypassword
 ```
 
-It will return authenication token
+Output 
 
-```
+```sh
 {
     "access_token": "imdUX2_t_WQLSTUlaLBTjVyHUTg",
     "token_type": "bearer",
@@ -69,7 +70,7 @@ It will return authenication token
 }
 ```
 
-Create User
+## Step 3: Create user using user microservice
 
 ```
 curl -X POST \
@@ -82,7 +83,7 @@ curl -X POST \
  
  ```
 
-Place order
+## Step 4: Create order using order microservice
  
 ```
 curl -X POST \
@@ -94,7 +95,7 @@ curl -X POST \
   -d '{"userId":1, "orderDate": "2021-01-01"}'
 ```
 
-Get User
+## Step 5: Get user and order using user microservice
 
 ```
 curl -X GET \
@@ -122,9 +123,6 @@ curl -X GET \
     ]
 }
 ```
-
-
-
 
 
 

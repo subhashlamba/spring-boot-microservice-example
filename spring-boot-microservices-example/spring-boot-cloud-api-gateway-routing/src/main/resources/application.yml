@@ -1,0 +1,33 @@
+
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    serviceUrl:
+      defaultZone : http://${eureka.instance.hostname}:8761/eureka/
+
+  server:
+    eviction-interval-timer-in-ms: 1000
+
+spring:
+  application:
+    name: zuul-api-gateway-service
+  cloud:
+    gateway:
+      routes:
+        - id: user-service
+          uri: lb://USER-SERVICE
+          predicates:
+            - Path=/user/**
+        - id: order-service
+          uri: lb://ORDER-SERVICE
+          predicates:
+            - Path=/order/**
+        - id: authentication-service
+          uri: lb://authentication-service
+          predicates:
+            - Path=/oauth/**
+
+
+

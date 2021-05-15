@@ -2,7 +2,7 @@
 
 This is example of spring boot microservice example with Eureka Server + Eureka Client + Spring Cloud API Getway + OAuth2.0
 
- - Eureka Server : It is eureka service registery
+ - Eureka Server : It is eureka service registry
  - Eureka Client : It's eureka client or microservice
  - Spring Cloud API Gateway: It's API Gateway which is responsible to route the request to specific microservice
  - Spring OAuth2.0: Authentication service and responsible to secure the end points.

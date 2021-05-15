@@ -12,7 +12,7 @@ eureka:
 
 spring:
   application:
-    name: zuul-api-gateway-service
+    name: api-gateway-service
   cloud:
     gateway:
       routes:

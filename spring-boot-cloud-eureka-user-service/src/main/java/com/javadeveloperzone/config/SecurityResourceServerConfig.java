@@ -1,7 +1,10 @@
 package com.javadeveloperzone.config;
 
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
@@ -9,6 +12,7 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.oauth2.config.annotation.web.configuration.ResourceServerConfigurerAdapter;
 import org.springframework.security.oauth2.provider.token.RemoteTokenServices;
+import org.springframework.web.client.RestTemplate;
 
 @Configuration
 public class SecurityResourceServerConfig extends ResourceServerConfigurerAdapter {
@@ -21,6 +25,10 @@ public class SecurityResourceServerConfig extends ResourceServerConfigurerAdapte
 
     @Value("${security.oauth2.client.client-secret}")
     private String clientSecret;
+
+    @Autowired
+    @Qualifier("tokenVerifier")
+    private RestTemplate restTemplate;
 
     @Override
     public void configure(HttpSecurity http) throws Exception {
@@ -36,6 +44,7 @@ public class SecurityResourceServerConfig extends ResourceServerConfigurerAdapte
     @Bean
     public RemoteTokenServices tokenServices() {
         final RemoteTokenServices tokenService = new RemoteTokenServices();
+        tokenService.setRestTemplate(restTemplate);
         tokenService.setCheckTokenEndpointUrl(url);
         tokenService.setClientId(clientId);
         tokenService.setClientSecret(clientSecret);

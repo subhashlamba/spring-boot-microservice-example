@@ -8,6 +8,7 @@ import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Primary;
 import org.springframework.http.HttpRequest;
 import org.springframework.http.client.ClientHttpRequestExecution;
 import org.springframework.http.client.ClientHttpRequestInterceptor;
@@ -38,6 +39,7 @@ public class EurekaClientConfig {
 
     @LoadBalanced
     @Bean
+    @Primary
     public RestTemplate orderService(){
         RestTemplate restTemplate = new RestTemplate();
 
@@ -54,6 +56,13 @@ public class EurekaClientConfig {
             }
         });
         restTemplate.setInterceptors(interceptors);
+        return restTemplate;
+    }
+
+    @LoadBalanced
+    @Bean(name = "tokenVerifier")
+    public RestTemplate tokenVerifier(){
+        RestTemplate restTemplate = new RestTemplate();
         return restTemplate;
     }
 

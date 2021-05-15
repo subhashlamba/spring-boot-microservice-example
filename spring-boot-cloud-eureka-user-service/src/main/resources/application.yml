@@ -18,7 +18,7 @@ security:
     enabled: false
   oauth2:
     resource:
-      token-info-uri: http://localhost:8686/oauth/check_token
+      token-info-uri: http://authentication-service/oauth/check_token
     client:
       client-id: javadeveloperzone
       client-secret: secret

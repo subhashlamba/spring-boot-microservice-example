@@ -1,6 +1,6 @@
 # Spring boot microservice example [![Build Status](https://travis-ci.com/subhashlamba/spring-microservices.svg?branch=master)](https://travis-ci.com/subhashlamba/spring-microservices)
 
-This is example of spring boot microservice example with Eureka Server + Eureka Client + Spring Cloud API Getway + OAuth2.0
+This is example of spring boot microservice example with Eureka Server + Eureka Client + Spring Cloud API Gateway + OAuth2.0 + Circuit breaker
 
  - **Eureka Server** : Eureka service registry
  - **Spring Cloud API Gateway**: API Gateway which is responsible to route the request to specific microservice
@@ -52,7 +52,18 @@ Eureka server is running 8761 port, Now let's open it. Where we can check that:
 
 ![eureka server](eureka-server.PNG)
 
-## Step 3: Generate OAuth2.0 token
+### Step 3: Configure Zipkin Server (Optional)
+
+    1. Download the [https://zipkin.io/pages/quickstart] Download zipkin
+    2. Start zipkin using following command:
+   ```
+   java -jar zipkin-server-2.23.2-exec.jar
+   ```
+    3. Open zipkin server : [http://localhost:9411/](http://localhost:9411/)
+    
+![Zipkin-Server](Zipkin-Server.PNG)
+
+## Step 4: Generate OAuth2.0 token
 
 ```sh
 curl -X POST \
@@ -78,7 +89,7 @@ Output
 }
 ```
 
-## Step 3: Create user using user microservice
+## Step 5: Create user using user microservice
 
 ```
 curl -X POST \
@@ -91,7 +102,7 @@ curl -X POST \
  
  ```
 
-## Step 4: Create order using order microservice
+## Step 6: Create order using order microservice
  
 ```
 curl -X POST \
@@ -103,7 +114,7 @@ curl -X POST \
   -d '{"userId":1, "orderDate": "2021-01-01"}'
 ```
 
-## Step 5: Get user and order using user microservice
+## Step 7: Get user and order using user microservice
 
 ```
 curl -X GET \

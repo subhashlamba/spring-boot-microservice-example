@@ -1,6 +1,6 @@
 # Spring boot microservice example [![Build Status](https://travis-ci.com/subhashlamba/spring-microservices.svg?branch=master)](https://travis-ci.com/subhashlamba/spring-microservices)
 
-This is example of spring boot microservice example with Eureka Server + Eureka Client + Spring Cloud API Gateway + OAuth2.0 + Circuit breaker
+Spring boot microservice example with Eureka Server + Eureka Client + Spring Cloud API Gateway + OAuth2.0 + Circuit Breaker + Resilience4J + FeignClient + RestTemplate
 
  - **Eureka Server** : Eureka service registry
  - **Spring Cloud API Gateway**: API Gateway which is responsible to route the request to specific microservice
@@ -54,12 +54,13 @@ START "Authentication Service" java -jar spring-boot-cloud-authentication-servic
 
 ## Step 2: Check Eureka Server
 
-Eureka server is running 8761 port, Now let's open it. Where we can check that:
+Eureka server is running 8761 port, Now let's open it. Where we can check following instances are running:
 
-* 1 instance of API Gateway service is running.
-* 1 instance of User service is running.
-* 1 instance of Order service is running.
-* 1 instance of Authentication service is running.
+* 1 instance of API Gateway service 
+* 1 instance of User service 
+* 1 instance of Order service 
+* 1 instance of Authentication service 
+* 1 instance of Notification service 
 
 
 ### Eureka server : [http://localhost:8761/](http://localhost:8761/)

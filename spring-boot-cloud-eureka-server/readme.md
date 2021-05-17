@@ -1,4 +1,4 @@
 # Service discovery
 
-    ![eureka server](spring-boot-cloud-eureka-server/eureka-server.PNG)
+   ![eureka server](spring-boot-cloud-eureka-server/eureka-server.PNG)
 

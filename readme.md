@@ -5,10 +5,22 @@ This is example of spring boot microservice example with Eureka Server + Eureka 
  - **Eureka Server** : Eureka service registry
  - **Spring Cloud API Gateway**: API Gateway which is responsible to route the request to specific microservice
  - **Spring OAuth2.0**: Authentication service and responsible to secure the end points.
- - **User Service**: User microservice with a basic feature (Eureka client)
-    - Supports circuit breaker at the time of calling order service 
+    - Generate OAuth token
+    - Validate the OAuth token
+ - **User Service**: User microservice with a basic feature 
+    - Eureka Client
+    - OAuth2.0 Client
+    - Supports RestTemplate Client 
+    - Supports Resilience4J circuit breaker 
+    - Use of Resilience4J circuit breaker with RestTemplate
  - **Order Service**: Order microservice with a basic feature (Eureka client)
-
+    - Eureka Client
+    - OAuth2.0 Client  
+    - Supports FeignClient Client
+    - Supports Resilience4J circuit breaker
+    - Use of Resilience4J circuit breaker with FeignClient 
+ - **Notification Service**: Notification microservice with basic feature
+    
 ## Checkout repository
 
 

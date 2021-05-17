@@ -24,4 +24,7 @@ public class OrderDetails {
     @Column
     private Long userId;
 
+    public Long getUserId() {
+        return userId;
+    }
 }

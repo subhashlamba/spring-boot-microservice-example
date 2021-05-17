@@ -19,3 +19,7 @@ security:
     client:
       client-id: javadeveloperzone
       client-secret: secret
+
+feign:
+  circuitbreaker:
+    enabled: true

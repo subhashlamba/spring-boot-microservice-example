@@ -28,6 +28,10 @@ spring:
           uri: lb://authentication-service
           predicates:
             - Path=/oauth/**
+        - id: notification-service
+          uri: lb://notification-service
+          predicates:
+            - Path=/notification/**
 
 
 

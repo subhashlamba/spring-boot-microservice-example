@@ -1,4 +1,4 @@
 # Service discovery
 
-   ![eureka server](spring-boot-cloud-eureka-server/eureka-server.PNG)
+   ![eureka server](https://github.com/subhashlamba/spring-boot-microservice-example/blob/main/eureka-server.PNG)
 

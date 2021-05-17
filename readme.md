@@ -20,6 +20,8 @@ Spring boot microservice example with Eureka Server + Eureka Client + Spring Clo
     - Supports Resilience4J circuit breaker
     - Use of Resilience4J circuit breaker with FeignClient 
  - **Notification Service**: Notification microservice with basic feature
+	- Eureka Client
+    - OAuth2.0 Client  
     
 ## Checkout repository
 

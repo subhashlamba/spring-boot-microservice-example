@@ -23,9 +23,14 @@ spring:
           uri: lb://authentication-service
           predicates:
             - Path=/oauth/**
+        - id: notification-service
+          uri: lb://notification-service
+          predicates:
+            - Path=/notification/**
 
 ```
 
  - any request start with "/user/*" will be forwarded to user service
  - any request start with "/order/*" will be forwarded to order service
  - any request start with "/oauth/*" will be forwarded to authentication service
+ - any request start with "/notification/*" will be forwarded to notification service

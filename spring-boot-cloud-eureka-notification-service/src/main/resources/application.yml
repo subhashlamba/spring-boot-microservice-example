@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: notification-service
+  zipkin:
+    base-url: http://localhost:9411/
+
+server:
+  port: 0
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    serviceUrl:
+      defaultZone : http://${eureka.instance.hostname}:8761/eureka/
+
+security:
+  basic:
+    enabled: false
+  oauth2:
+    resource:
+      token-info-uri: http://authentication-service/oauth/check_token
+    client:
+      client-id: javadeveloperzone
+      client-secret: secret

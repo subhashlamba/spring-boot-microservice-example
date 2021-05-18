@@ -5,6 +5,7 @@ Spring boot microservice example with Eureka Server + Eureka Client + Spring Clo
  - **Eureka Server** : Eureka service registry
  - **Spring Cloud API Gateway**: API Gateway which is responsible to route the request to specific microservice
  - **Spring OAuth2.0**: Authentication service and responsible to secure the end points.
+    - Eureka Client
     - Generate OAuth token
     - Validate the OAuth token
  - **User Service**: User microservice with a basic feature 
@@ -13,15 +14,18 @@ Spring boot microservice example with Eureka Server + Eureka Client + Spring Clo
     - Supports RestTemplate Client 
     - Supports Resilience4J circuit breaker 
     - Use of Resilience4J circuit breaker with RestTemplate
- - **Order Service**: Order microservice with a basic feature (Eureka client)
+    - Swagger Document
+ - **Order Service**: Order microservice with a basic feature 
     - Eureka Client
     - OAuth2.0 Client  
     - Supports FeignClient Client
     - Supports Resilience4J circuit breaker
     - Use of Resilience4J circuit breaker with FeignClient 
+    - Swagger Document
  - **Notification Service**: Notification microservice with basic feature
 	- Eureka Client
     - OAuth2.0 Client  
+    - Swagger Document
     
 ## Checkout repository
 
@@ -67,7 +71,7 @@ Eureka server is running 8761 port, Now let's open it. Where we can check follow
 
 ### Eureka server : [http://localhost:8761/](http://localhost:8761/)
 
-![eureka server](eureka-server.PNG)
+![eureka server](document/eureka-server.PNG)
 
 ### Step 3: Configure Zipkin Server (Optional)
 
@@ -78,9 +82,11 @@ Eureka server is running 8761 port, Now let's open it. Where we can check follow
    ```
     3. Open zipkin server : [http://localhost:9411/](http://localhost:9411/)
     
-![Zipkin-Server](Zipkin-Server.PNG)
+![Zipkin-Server](document/Zipkin-Server.PNG)
 
 ## Step 4: Generate OAuth2.0 token
+
+### 4.1 Using curl
 
 ```sh
 curl -X POST \
@@ -93,7 +99,19 @@ curl -X POST \
   -F username=zone1 \
   -F password=mypassword
 ```
+### 4.2 Using swagger
+    In the swagger UI, There is a "Autorize" button on the top, click on it it will open the following popup:
 
+![eureka server](./document/Auth2-0-Generate-Token.PNG)
+
+Use the following information
+
+```
+Username: zone1
+Password: mypassword
+ClientId: javadeveloperzone
+Secret: secret
+```
 Output 
 
 ```sh
@@ -108,6 +126,7 @@ Output
 
 ## Step 5: Create user using user microservice
 
+### 5.1 Using curl
 ```
 curl -X POST \
   http://localhost:8080/user/ \
@@ -118,9 +137,14 @@ curl -X POST \
   -d '{"firstName":"subhash", "lastName": "Lamba"}'
  
  ```
+### 5.2 Using Swagger UI
+
+![eureka server](./document/User-Microservice-Swagger.PNG)
 
 ## Step 6: Create order using order microservice
  
+ 
+### 6.1 Using curl 
 ```
 curl -X POST \
   http://localhost:8080/order/ \
@@ -131,8 +155,14 @@ curl -X POST \
   -d '{"userId":1, "orderDate": "2021-01-01"}'
 ```
 
+### 6.2 Using Swagger UI
+
+![eureka server](./document/Order-Microservice-Swagger.PNG)
+
+
 ## Step 7: Get user and order using user microservice
 
+### 7.1 Using curl 
 ```
 curl -X GET \
   http://localhost:8080/user/1 \
@@ -159,6 +189,12 @@ curl -X GET \
     ]
 }
 ```
+
+### 7.1 Using Swagger UI 
+
+![eureka server](./document/User-Microservice-Swagger.PNG)
+
+
 
 
 

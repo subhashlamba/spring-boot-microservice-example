@@ -6,7 +6,7 @@ spring:
       name: subhash
       password: subhash
 server:
-  port: 8686
+  port: 8484
 eureka:
   instance:
     hostname: localhost

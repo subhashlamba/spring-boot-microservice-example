@@ -4,7 +4,6 @@ package com.javadeveloperzone.config;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
@@ -37,7 +36,9 @@ public class SecurityResourceServerConfig extends ResourceServerConfigurerAdapte
                 .and()
                 .authorizeRequests()
                 .antMatchers("/user/**")
-                .access("#oauth2.hasScope('read')");      // require 'read' scope to access /demo URL
+                .access("#oauth2.hasScope('read')")
+                .antMatchers("/v2/api-docs", "/configuration/ui", "/swagger-resources/**", "/configuration/**",	"/swagger-ui.html", "/webjars/**", "/swagger-resources/configuration/ui", "/swagger-ui.html", "/swagger-resources/configuration/security", "/migration/**", "/oauth/token/**")
+                .permitAll();
     }
 
     @Primary

@@ -40,8 +40,8 @@ public class SwaggerConfig {
 
 
     private ApiInfo apiEndPointsInfo() {
-        return new ApiInfoBuilder().title("Job Platform REST API")
-                .description("REST APIs for Job Platform Application")
+        return new ApiInfoBuilder().title("Spring microservice API")
+                .description("Spring microservice API")
                 .contact(new Contact("Subhash Lamba", "https://prominentpixel.com/", "info@prominentpixel.com"))
                 .license("Apache 2.0")
                 .licenseUrl("http://www.apache.org/licenses/LICENSE-2.0.html")
@@ -80,7 +80,7 @@ public class SwaggerConfig {
     @Bean
     public SecurityConfiguration security() {
         return new SecurityConfiguration
-                ("client", "secret", "", "", "", ApiKeyVehicle.HEADER, HttpHeaders.AUTHORIZATION,"");
+                ("javadeveloperzone", "secret", "", "", "", ApiKeyVehicle.HEADER, HttpHeaders.AUTHORIZATION,"");
     }
 
     /**

@@ -14,18 +14,18 @@ Spring boot microservice example with Eureka Server + Eureka Client + Spring Clo
     - Supports RestTemplate Client 
     - Supports Resilience4J circuit breaker 
     - Use of Resilience4J circuit breaker with RestTemplate
-    - Swagger Document - [http://localhost:8181/swagger-ui.html](http://localhost:8181/swagger-ui.html)
+    - Swagger Document - [http://localhost:8181/swagger-ui/index.html](http://localhost:8181/swagger-ui/index.html)
  - **Order Service**: Order microservice with a basic feature 
     - Eureka Client
     - OAuth2.0 Client  
     - Supports FeignClient Client
     - Supports Resilience4J circuit breaker
     - Use of Resilience4J circuit breaker with FeignClient 
-    - Swagger Document - [http://localhost:8282/swagger-ui.html](http://localhost:8282/swagger-ui.html)
+    - Swagger Document - [http://localhost:8282/swagger-ui/index.html](http://localhost:8282/swagger-ui/index.html)
  - **Notification Service**: Notification microservice with basic feature
     - Eureka Client
     - OAuth2.0 Client  
-    - Swagger Document - [http://localhost:8383/swagger-ui.html](http://localhost:8383/swagger-ui.html)
+    - Swagger Document - [http://localhost:8383/swagger-ui/index.html](http://localhost:8383/swagger-ui/index.html)
     
 ## Checkout repository
 

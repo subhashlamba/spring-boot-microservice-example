@@ -9,8 +9,8 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.javadeveloperzone</groupId>
-    <artifactId>microservce-example</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <artifactId>user-service</artifactId>
+    <version>1.0.0</version>
     <name>spring-microservice-user-service</name>
     <description>Sprig boot microservice user service</description>
     <properties>

@@ -8,11 +8,11 @@
         <version>2.4.5</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.example</groupId>
-    <artifactId>demo</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-    <name>demo</name>
-    <description>Demo project for Spring Boot</description>
+    <groupId>com.javadeveloperzone</groupId>
+    <artifactId>api-gateway-service</artifactId>
+    <version>1.0.0</version>
+    <name>spring-microservice-api-gateway-service</name>
+    <description>Spring microservice api gateway service</description>
     <properties>
         <java.version>11</java.version>
         <spring-cloud.version>2020.0.2</spring-cloud.version>

@@ -8,9 +8,9 @@
         <version>2.4.5</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>spring-microservice-example</groupId>
-    <artifactId>com.javadeveloperzone</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <groupId>com.javadeveloperzone</groupId>
+    <artifactId>server-registry-service</artifactId>
+    <version>1.0.0</version>
     <name>spring-microservice-eureka-server</name>
     <description>Spring microservice eureka server</description>
     <properties>

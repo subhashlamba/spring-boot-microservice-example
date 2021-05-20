@@ -9,8 +9,8 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.javadeveloperzone</groupId>
-    <artifactId>microservce-example</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <artifactId>notification-service</artifactId>
+    <version>1.0.0</version>
     <name>spring-microservice-notification-service</name>
     <description>Sprig boot microservice notification service</description>
     <properties>
@@ -100,7 +100,7 @@
             <artifactId>springfox-boot-starter</artifactId>
             <version>3.0.0</version>
         </dependency>
-        
+
     </dependencies>
     <dependencyManagement>
         <dependencies>

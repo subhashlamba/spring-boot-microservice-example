@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.javadeveloperzone</groupId>
-    <artifactId>microservce-example</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <artifactId>order-service</artifactId>
+    <version>1.0.0</version>
     <name>spring-microservice-order-service</name>
-    <description>Sprig boot microservice order service</description>
+    <description>Spring boot microservice order service</description>
     <properties>
         <java.version>11</java.version>
         <spring-cloud.version>2020.0.2</spring-cloud.version>
